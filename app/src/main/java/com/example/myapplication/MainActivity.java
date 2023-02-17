@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toast toast = Toast.makeText(MainActivity.this, "Какое-то сообщение", Toast.LENGTH_LONG);
         toast.show();
-        Log.i (TAG, "Это мое сообщение для записи в журнале оценок");
+        Log.i (TAG, "Это мое сообщение для записи в журнале");
     }
 
     @Override

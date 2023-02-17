@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStop();
         Toast toast = Toast.makeText(MainActivity.this, "Какое-то сообщение", Toast.LENGTH_LONG);
         toast.show();
+        Log.w (TAG, "Это мое сообщение для записи в журнале");
     }
 
     @Override
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         Toast toast = Toast.makeText(MainActivity.this, "Какое-то сообщение", Toast.LENGTH_LONG);
         toast.show();
+        Log.i (TAG, "Это мое сообщение для записи в журнале");
     }
 
     @Override
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         Toast toast = Toast.makeText(MainActivity.this, "Какое-то сообщение", Toast.LENGTH_LONG);
         toast.show();
+        Log.d (TAG, "Это мое сообщение для записи в журнале");
     }
 
     @Override
@@ -53,5 +56,6 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         Toast toast = Toast.makeText(MainActivity.this, "Какое-то сообщение", Toast.LENGTH_LONG);
         toast.show();
+        Log.w (TAG, "Это мое сообщение для записи в журнале");
     }
 }

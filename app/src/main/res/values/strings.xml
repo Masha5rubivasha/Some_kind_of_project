@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">MyApplication</string>
+    <string name="account">Профиль пользователя</string>
+    <string name="name_account">Имя</string>
+    <string name="save">Сохранить</string>
 </resources>

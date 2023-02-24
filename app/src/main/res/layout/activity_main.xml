@@ -57,7 +57,7 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
@@ -68,18 +68,21 @@
             android:layout_marginTop="116dp"
             android:layout_marginEnd="266dp"
             android:layout_marginBottom="36dp"
-            android:text="@string/save" />
+            android:onClick="onClick"
+            android:text="@string/save"
+            app:cornerRadius="30sp" />
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="409dp"
         android:layout_height="50dp"
+        android:layout_marginStart="3dp"
         android:layout_marginTop="16dp"
         android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp">
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/textView3"
@@ -91,5 +94,17 @@
             android:textColor="@color/black"
             android:textSize="30dp" />
     </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="view_maps"
+        android:text="@string/map"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.906" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

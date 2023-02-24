@@ -3,4 +3,6 @@
     <string name="account">Профиль пользователя</string>
     <string name="name_account">Имя</string>
     <string name="save">Сохранить</string>
+    <string name="map">Посмотреть карту</string>
+    <string name="map_back">Вернуться на главную страницу</string>
 </resources>

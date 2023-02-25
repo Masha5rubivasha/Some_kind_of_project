@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.EditText;
 import android.widget.Button;
@@ -27,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         name_account = findViewById(R.id.editTextTextPersonName2);//ввод имени
         Button save_button = findViewById(R.id.button_save);//кнопка сохранения
+        ImageView wine_glass = findViewById(R.id.imageView);//картинка
+
+        wine_glass.setImageResource(R.drawable.pngwing_com);
 
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override

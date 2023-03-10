@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.EditText;
 import android.widget.Button;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText name_account;
     Button save_button;
+    TextView activ2;
 
     private static final String TAG = "MyApp";
 
@@ -29,8 +32,10 @@ public class MainActivity extends AppCompatActivity {
         name_account = findViewById(R.id.editTextTextPersonName2);//ввод имени
         Button save_button = findViewById(R.id.button_save);//кнопка сохранения
         ImageView wine_glass = findViewById(R.id.imageView);//картинка
-
         wine_glass.setImageResource(R.drawable.pngwing_com);
+
+        TextView profile = findViewById(R.id.textView3);
+        profile.setText(R.string.account);
 
         save_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +72,16 @@ public class MainActivity extends AppCompatActivity {
     public void view_maps(View v){
         Intent intent = new Intent(this, MainActivity2.class);
         intent.putExtra("name", name_account.getText().toString());
-        startActivity(intent);
+        startActivityForResult(intent, 1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (data == null){
+            return;
+        }String name = data.getStringExtra("name");
+        activ2.setText (name);
     }
 
     @Override

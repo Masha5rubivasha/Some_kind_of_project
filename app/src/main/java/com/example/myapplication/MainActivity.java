@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         name_account = findViewById(R.id.editTextTextPersonName2);//ввод имени
         Button save_button = findViewById(R.id.button_save);//кнопка сохранения
         ImageView wine_glass = findViewById(R.id.imageView);//картинка
+        activ2 = findViewById(R.id.textView2);
         wine_glass.setImageResource(R.drawable.pngwing_com);
 
         TextView profile = findViewById(R.id.textView3);
@@ -78,10 +79,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (data == null){
-            return;
-        }String name = data.getStringExtra("name");
-        activ2.setText (name);
+        if (requestCode == 1 && resultCode == RESULT_OK) {
+            if (data == null){
+                return;
+            }
+            String name = data.getStringExtra("name");
+            activ2.setText (name);
+        }
     }
 
     @Override

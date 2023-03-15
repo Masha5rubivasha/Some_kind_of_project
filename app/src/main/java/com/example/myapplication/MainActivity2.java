@@ -25,7 +25,7 @@ public class MainActivity2 extends AppCompatActivity {
         textViev.setText(name);
         editText = (EditText) findViewById(R.id.editTextTextPersonName);
     }
-    public void maps_back(View v){
+    public void maps_back(View v) {
         Intent intent = new Intent();
         intent.putExtra("name", editText.getText().toString());
         setResult(RESULT_OK, intent);
